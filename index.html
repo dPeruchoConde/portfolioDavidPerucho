@@ -15,8 +15,14 @@
             <div class="info">
                 <h1>David Perucho Conde</h1>
                 <p>Email: david.rbdh@gmail.com</p>
-                <p>LinkedIn: linkedin.com/in/tuusuario</p>
-                <p>Teléfono: +34 649095057</p>
+                <!-- <p>LinkedIn: linkedin.com/in/tuusuario</p> -->
+                <p id="spanish" style="display: none;">Teléfono: +34 649095057</p>
+                <p id="english">Phone: +34 649095057</p>
+            </div>
+
+            <div class="language-selector">
+                <button id="btn-en" onclick="showEnglishText()"><img src="assets/banderaInglaterra.svg" alt="Foto de perfil" class="bandera">ENGLISH</button>
+                <button id="btn-es" onclick="showSpanishText()"><img src="assets/banderaEspania.jpg" alt="Foto de perfil" class="bandera">ESPAÑOL</button>
             </div>
         </div>
     </header>
@@ -33,7 +39,9 @@
                 varios profesionales de la industria. Después de está experiencia estoy más motivado que nunca para seguir mejorando
                 y aprendiendo.
 
-                Soy capaz de hablar en varios idiomas como el inglés (C1), el italiano (B2), el catalán (B2) y por su puesto el español (Nativo).
+                <br>
+                <br>
+                Soy capaz de hablar varios idiomas como el inglés (C1), el italiano (B2), el catalán (B2) y por su puesto el español (Nativo).
             </p>
         </section>
 
@@ -111,3 +119,17 @@
 
 </body>
 </html>
+
+<script>
+
+function showSpanishText() {
+    document.getElementById("spanish").style.display = "block";
+    document.getElementById("english").style.display = "none";
+}
+
+function showEnglishText() {
+    document.getElementById("spanish").style.display = "none";
+    document.getElementById("english").style.display = "block";
+}
+
+</script>
