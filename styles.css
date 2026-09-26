@@ -105,20 +105,6 @@ details[open] summary::after {
     content: " ▲";
 }
 
-.contenido {
-    padding: 15px;
-    background: #fafafa;
-}
-
-.contenido p {
-    margin-bottom: 10px;
-}
-
-section p:last-child,
-.contenido p:last-child {
-    margin-bottom: 0;
-}
-
 @media (max-width: 768px) {
     main {
         width: 95%;
@@ -154,10 +140,6 @@ section p:last-child,
 .fecha {
     font-weight: 500;
     white-space: nowrap;
-}
-
-.contenido strong {
-    font-weight: 700;
 }
 
 .language-selector {
@@ -203,4 +185,116 @@ section p:last-child,
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
+}
+
+/* =========================
+   PROYECTOS
+   ========================= */
+
+.proyectos {
+    background: white;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.proyectos h2 {
+    color: #162a66;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4f46e5;
+}
+
+.lista-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.proyecto {
+    border: 1px solid #d9deea;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgb(255, 255, 255);
+}
+
+/* Cabecera desplegable */
+
+.proyecto summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 22px;
+
+    background: #162a66;
+    color: white;
+
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+    list-style: none;
+    transition: background-color 0.2s ease;
+}
+
+.proyecto summary:hover {
+    background: #213b85;
+}
+
+.proyecto summary::-webkit-details-marker {
+    display: none;
+}
+
+.flecha {
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.proyecto[open] .flecha {
+    transform: rotate(180deg);
+}
+
+/* Contenido */
+
+.proyecto .contenido {
+    padding: 25px;
+    background: #eefcff;
+}
+
+.proyecto .contenido p {
+    margin-bottom: 12px;
+}
+
+.proyecto .contenido strong {
+    color: #162a66;
+}
+
+/* Vídeo */
+
+.gameplay {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.gameplay h4 {
+    color: #162a66;
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+}
+
+.gameplay video {
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+
+    background: #000;
 }
