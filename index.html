@@ -219,7 +219,7 @@
 
                         <div class="acciones-proyecto">
                             <a class="boton-proyecto secundario"
-                            href="https://davidperuchoconde.itch.io/e-mask"
+                            href="https://drive.google.com/file/d/1wWAoTLeNMbmfMWil0ME6w4BzPYtzCj_k/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer">
                                 <span class="icono">↗</span>
@@ -233,10 +233,10 @@
 
                         <div class="separador"></div>
                         <div class="gameplay">
-                            <h4>Imágenes del juego</h4>
+                            <h4>Viedeo con las opciones del proyecto</h4>
 
                             <video controls>
-                                <source src="assets/Unwoven/CompleteGameplay.mp4" type="video/mp4">
+                                <source src="assets/TFG/TFG.mp4" type="video/mp4">
                                 Tu navegador no permite la carga del vídeo.
                             </video>
                         </div>
@@ -253,7 +253,7 @@
                                 <h3>Descripción</h3>
                                 <p>
                                     Side-scroller realizado para la Global Game Jam en el que el jugador debe de controlar a Elon Mask,
-                                    evitando trampas y enemigos para acceder a un ordenador y teitear.
+                                    evitando trampas y enemigos para acceder a un ordenador y twitear.
                                 </p>
                             </div>
 
@@ -272,7 +272,6 @@
                                     <span>C#</span>
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="acciones-proyecto">
@@ -290,19 +289,33 @@
                         </div>
 
                         <div class="separador"></div>
-                        <div class="gameplay">
-                            <h4>Imágenes del juego</h4>
-
-                            <video controls>
-                                <source src="assets/Unwoven/CompleteGameplay.mp4" type="video/mp4">
-                                Tu navegador no permite la carga del vídeo.
-                            </video>
+                        <div class="slider">
+                            <div class="slides">
+                                
+                                <img src="assets/EMask/EMask4.png" alt="Captura del proyecto 1">
+                                <img src="assets/EMask/EMask1.png" alt="Captura del proyecto 2">
+                                <img src="assets/EMask/EMask2.png" alt="Captura del proyecto 3">
+                                <img src="assets/EMask/EMask3.png" alt="Captura del proyecto 4">
+                            
+                            </div>
+                        
+                            <button class="slider-btn anterior" onclick="moverSlide(-1)">
+                                &#10094;
+                            </button>
+                        
+                            <button class="slider-btn siguiente" onclick="moverSlide(1)">
+                                &#10095;
+                            </button>
+                        
+                            <div class="indicadores">
+                                <span class="punto activo" onclick="irASlide(0)"></span>
+                                <span class="punto" onclick="irASlide(1)"></span>
+                                <span class="punto" onclick="irASlide(2)"></span>
+                                <span class="punto" onclick="irASlide(3)"></span>
+                            </div>
                         </div>
                     </div>
                 </details>
-
-                </div>
-
             </section>
         </main>
 
@@ -434,15 +447,47 @@
 </html>
 
 <script>
+let slideActual = 0;
 
-function showSpanishText() {
-    document.getElementById("spanish").style.display = "block";
-    document.getElementById("english").style.display = "none";
-}
+    const slides = document.querySelector(".slides");
+    const puntos = document.querySelectorAll(".punto");
+    const totalSlides = document.querySelectorAll(".slides img").length;
 
-function showEnglishText() {
-    document.getElementById("spanish").style.display = "none";
-    document.getElementById("english").style.display = "block";
-}
+    function actualizarSlider() {
+        slides.style.transform = `translateX(-${slideActual * 100}%)`;
+
+        puntos.forEach((punto, index) => {
+            punto.classList.toggle("activo", index === slideActual);
+        });
+    }
+
+    function moverSlide(direccion) {
+        slideActual += direccion;
+
+        if (slideActual >= totalSlides) {
+            slideActual = 0;
+        }
+
+        if (slideActual < 0) {
+            slideActual = totalSlides - 1;
+        }
+
+        actualizarSlider();
+    }
+
+    function irASlide(numero) {
+        slideActual = numero;
+        actualizarSlider();
+    }
+
+    function showSpanishText() {
+        document.getElementById("spanish").style.display = "block";
+        document.getElementById("english").style.display = "none";
+    }
+
+    function showEnglishText() {
+        document.getElementById("spanish").style.display = "none";
+        document.getElementById("english").style.display = "block";
+    }
 
 </script>

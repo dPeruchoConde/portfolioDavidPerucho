@@ -443,3 +443,102 @@ details[open] summary::after {
 
     background: #000;
 }
+
+/* =========================
+   SLIDER DE IMÁGENES
+   ========================= */
+
+.slider {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #111;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slides img {
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+    object-fit: contain;
+}
+
+/* Botones */
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(22, 42, 102, 0.85);
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background 0.2s ease;
+}
+
+.slider-btn:hover {
+    background: rgba(22, 42, 102, 1);
+}
+
+.anterior {
+    left: 15px;
+}
+
+.siguiente {
+    right: 15px;
+}
+
+/* Puntos */
+
+.indicadores {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 8px;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.punto:hover {
+    transform: scale(1.2);
+}
+
+.punto.activo {
+    background: white;
+}
