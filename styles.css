@@ -257,11 +257,13 @@ details[open] summary::after {
     transform: rotate(180deg);
 }
 
-/* Contenido */
+/* =========================
+   CONTENIDO DEL PROYECTO
+   ========================= */
 
 .proyecto .contenido {
-    padding: 25px;
-    background: #eefcff;
+    padding: 30px;
+    background: #f8fbfd;
 }
 
 .proyecto .contenido p {
@@ -272,10 +274,153 @@ details[open] summary::after {
     color: #162a66;
 }
 
-/* Vídeo */
+/* Información */
+
+.info-proyecto {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.bloque-info {
+    padding-left: 18px;
+    border-left: 3px solid #4f46e5;
+}
+
+.bloque-info h3 {
+    color: #162a66;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.bloque-info p {
+    margin: 0 0 8px;
+    line-height: 1.7;
+    color: #374151;
+}
+
+.bloque-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tecnologías */
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.tecnologias span {
+    background: #e8edff;
+    color: #162a66;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* =========================
+   BOTONES DEL PROYECTO
+   ========================= */
+
+.acciones-proyecto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.boton-proyecto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 14px 18px;
+
+    background: white;
+    color: #162a66;
+
+    border: 1px solid #d9deea;
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.boton-proyecto:hover {
+    transform: translateY(-2px);
+    border-color: #4f46e5;
+    box-shadow: 0 5px 15px rgba(22, 42, 102, 0.12);
+    background: #f8f9ff;
+}
+
+.boton-proyecto .icono {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #162a66;
+    color: white;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.boton-proyecto strong {
+    display: block;
+    color: #162a66;
+    font-size: 1rem;
+}
+
+.boton-proyecto small {
+    display: block;
+    margin-top: 2px;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.boton-proyecto .flecha {
+    margin-left: auto;
+    font-size: 1.3rem;
+    color: #4f46e5;
+    transition: transform 0.2s ease;
+}
+
+.boton-proyecto:hover .flecha {
+    transform: translateX(4px);
+}
+
+/* Segundo botón */
+
+.boton-proyecto.secundario .icono {
+    background: #4f46e5;
+}
+
+/* Separador */
+
+.separador {
+    height: 1px;
+    background: #d1d5db;
+    margin: 30px 0;
+}
+
+/* =========================
+   VÍDEO
+   ========================= */
 
 .gameplay {
-    margin-top: 30px;
+    margin-top: 0;
     text-align: center;
 }
 
@@ -292,9 +437,9 @@ details[open] summary::after {
     height: auto;
     margin: 0 auto;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
 
     background: #000;
 }
