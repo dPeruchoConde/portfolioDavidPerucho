@@ -585,6 +585,10 @@ details[open] summary::after {
     .perfil {
         width: 90px;
         height: 90px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        border-radius: 50%;
     }
 
     .info h1 {
