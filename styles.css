@@ -444,6 +444,22 @@ details[open] summary::after {
     background: #000;
 }
 
+.gameplay iframe {
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 0 auto;
+
+    border: none;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+
+    background: #000;
+}
+
 /* =========================
    SLIDER DE IMÁGENES
    ========================= */
