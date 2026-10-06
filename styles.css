@@ -105,30 +105,6 @@ details[open] summary::after {
     content: " ▲";
 }
 
-@media (max-width: 768px) {
-    main {
-        width: 95%;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .cabecera {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .perfil {
-        width: 100px;
-        height: 100px;
-    }
-
-    .info h1 {
-        font-size: 1.6rem;
-    }
-}
-
 .cv-item {
     display: grid;
     grid-template-columns: 170px 1fr;
@@ -557,4 +533,229 @@ details[open] summary::after {
 
 .punto.activo {
     background: white;
+}
+
+/* =========================
+   PARA MÓVILES
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* General */
+
+    body {
+        font-size: 15px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section,
+    .proyectos {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2,
+    .proyectos h2 {
+        font-size: 1.5rem;
+    }
+
+
+    /* =========================
+       CABECERA
+       ========================= */
+
+    header {
+        padding: 25px 15px;
+    }
+
+    .cabecera {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .perfil {
+        width: 90px;
+        height: 90px;
+    }
+
+    .info h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .info p {
+        font-size: 0.95rem;
+    }
+
+
+    /* =========================
+       SELECTOR DE IDIOMA
+       ========================= */
+
+    .language-selector {
+        position: static;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .language-selector button {
+        width: auto;
+        height: 45px;
+
+        padding: 5px 10px;
+
+        font-size: 13px;
+        gap: 6px;
+    }
+
+    .bandera {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    /* =========================
+       FORMACIÓN / EXPERIENCIA
+       ========================= */
+
+    .cv-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        margin-bottom: 18px;
+    }
+
+    .fecha {
+        white-space: normal;
+        font-size: 0.9rem;
+        color: #6b7280;
+    }
+
+
+    /* =========================
+       PROYECTOS
+       ========================= */
+
+    .proyecto summary {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .proyecto .contenido {
+        padding: 20px 15px;
+    }
+
+    .bloque-info {
+        padding-left: 12px;
+    }
+
+    .bloque-info p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       TECNOLOGÍAS
+       ========================= */
+
+    .tecnologias span {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+
+    /* =========================
+       BOTONES
+       ========================= */
+
+    .boton-proyecto {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .boton-proyecto .icono {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .boton-proyecto strong {
+        font-size: 0.9rem;
+    }
+
+    .boton-proyecto small {
+        font-size: 0.75rem;
+    }
+
+    .boton-proyecto .flecha {
+        font-size: 1.1rem;
+    }
+
+
+    /* =========================
+       VÍDEOS
+       ========================= */
+
+    .gameplay video,
+    .gameplay iframe {
+        width: 100%;
+        max-width: none;
+        border-radius: 8px;
+    }
+
+    .gameplay h4 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+
+    /* =========================
+       SLIDER
+       ========================= */
+
+    .slider {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .anterior {
+        left: 8px;
+    }
+
+    .siguiente {
+        right: 8px;
+    }
+
+    .indicadores {
+        bottom: 8px;
+        gap: 6px;
+    }
+
+    .punto {
+        width: 8px;
+        height: 8px;
+    }
 }
