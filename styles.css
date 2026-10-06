@@ -643,6 +643,17 @@ details[open] summary::after {
         grid-template-columns: 1fr;
         gap: 5px;
         margin-bottom: 18px;
+        min-width: 0;
+    }
+
+    .cv-item .contenido {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .cv-item a {
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
     .fecha {
