@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CV David Perucho Conde</title>
+<style>
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 210mm;
+        min-height: 297mm;
+    }
+
+    body {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background: #525659;
+    }
+
+    .cv-container {
+        display: flex;
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        background: #ffffff;
+    }
+
+    .left-column {
+        width: 35%;
+        background-color: #2b3a4a;
+        color: #ffffff;
+        padding: 25px 25px;
+    }
+
+    .right-column {
+        width: 65%;
+        padding: 25px 30px;
+        color: #333333;
+    }
+
+    .photo-box {
+        width: 120px;
+        height: 120px;
+        background-color: #e0e0e0;
+        border-radius: 50%;
+        margin: 0 auto 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        font-weight: bold;
+        text-align: center;
+        border: 4px solid #4a5c6e;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin: 0 0 10px 0;
+        text-transform: uppercase;
+        color: #2b3a4a;
+    }
+
+    h2.section-title-left {
+        font-size: 15px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #4a5c6e;
+        padding-bottom: 4px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #66b2ff;
+    }
+
+    h2.section-title-right {
+        font-size: 17px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #2b3a4a;
+        padding-bottom: 4px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        color: #2b3a4a;
+    }
+
+    .section-content {
+        font-size: 11px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .contact-item {
+        margin-bottom: 7px;
+        font-size: 11px;
+        word-wrap: break-word;
+    }
+
+    .contact-item a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .job-title {
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .company-date {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 4px;
+        font-size: 11px;
+    }
+
+    p {
+        margin-top: 4px;
+        margin-bottom: 8px;
+    }
+
+    a {
+        color: #0056b3;
+    }
+
+    @media print {
+        body {
+            background: #ffffff;
+        }
+
+        .cv-container {
+            margin: 0;
+            box-shadow: none;
+            page-break-after: avoid;
+        }
+
+        .left-column,
+        .right-column {
+            break-inside: avoid;
+        }
+    }
+
+    .photo-box {
+    width: 120px;
+    height: 120px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    border: 4px solid #4a5c6e;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.left-column {
+    width: 35%;
+    background-color: #2b3a4a;
+    color: #d5d9de;
+    padding: 25px 25px;
+}
+</style>
+</head>
+<body>
+
+<div class="cv-container">
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="left-column">
+        <div class="photo-box">
+            <img src="assets/fotoCV.jpg" alt="Foto de David Perucho Conde">
+        </div>
+
+        <h2 class="section-title-left">Contact information</h2>
+        <div class="contact-item">📞 +34 649 095 057</div>
+        <div class="contact-item">✉️ david.rbdh@gmail.com</div>
+        <div class="contact-item">📍 Manzanares el Real, Spain</div>
+        <div class="contact-item"><strong>LinkedIn:</strong><br> <a href="https://www.linkedin.com/in/david-perucho-45b3a7346/">linkedin.com/in/david-perucho-45b3a7346/</a></div>
+        <div class="contact-item"><strong>Portfolio:</strong><br> <a href="https://dperuchoconde.github.io/portfolioDavidPerucho/">dperuchoconde.github.io/portfolioDavidPerucho/</a></div>
+
+        <h2 class="section-title-left">Skills</h2>
+        <div class="section-content">
+            <strong>Skills:</strong><br>
+            Languages: C#, C++, Python, SQL, C, VB, JavaScript.<br>
+            Game Engines: Unity, Unreal.<br>
+            Tools: Git, Azure DevOps, Power Automate, Perforce, Jira.<br><br>
+            <strong>Personales:</strong><br>
+            Teamwork · Communication · Problem Solving · Adaptability
+        </div>
+
+        <h2 class="section-title-left">Languajes</h2>
+        <div class="section-content">
+            Spanish — Nativo<br>
+            English — C1<br>
+            Italian — B2<br>
+            Catalan — B2
+        </div>
+    </div>
+
+    <!-- COLUMNA DERECHA -->
+    <div class="right-column">
+        <h1>David Perucho Conde</h1>
+        <br>
+
+        <h2 class="section-title-right">Perfil Personal</h2>
+        <div class="section-content">
+            Programmer with a passion for video games, looking to pursue a professional career in the industry. I have 
+            experience working in 
+            IT, where I gained knowledge in backend and frontend development of APIs, applications, and websites, while also 
+            strengthening my teamwork, communication, and management skills. In addition, I have learned video game 
+            development both through personal projects and academic studies, including a Master’s Degree in Video Game 
+            Development at the Universidad Complutense de Madrid. Outside of work, I enjoy staying active, travelling, 
+            meeting new people, and experiencing new things.
+        </div>
+
+        <h2 class="section-title-right">Expirience</h2>
+        <div class="section-content">
+            <div class="job-title">Full-stack software developer of apps, APIs and web applications</div>
+            <div class="company-date">Findirect (Financiera Española de Crédito a Distancia, E.F.C., S.A.), Madrid | 10/2024 – Now</div>
+            <br>
+            <div class="job-title">AI, Gameplay and Animations programmer</div>
+            <div class="company-date">Unwoven (Graveyard Trials) | 12/2025 – 09/2026</div>
+        </div>
+
+        <h2 class="section-title-right">Studies</h2>
+        <div class="section-content">
+            <div class="job-title">Master's Degree in Video Game Programming</div>
+            <div class="company-date">Universidad Complutense de Madrid, Madrid | 10/2025 – 09/2026</div>
+            <br>
+            <div class="job-title">Bachelor's Degree in Computer Science</div>
+            <div class="company-date">Universidad Autónoma de Madrid, Madrid | 09/2020 – 05/2025</div>
+        </div>
+
+        <h2 class="section-title-right">Proyects</h2>
+        <div class="section-content">
+            <div class="job-title">Unwoven | Programmer</div>
+            <div class="company-date">Realese: 06/2026</div>
+            <p style="margin-top:5px;">
+                Unwoven is a twin-stick shooter in which the player must fight through rooms filled with hordes 
+                of enemies while unlocking new abilities and exploring a procedurally generated map.
+            </p>
+            <p>Project: <a href="https://store.steampowered.com/app/4551090/Unwoven">Steam page</a></p>
+
+            <div class="job-title" style="margin-top:15px;">Videogame for elderly people | Programmer and Desingner</div>
+            <div class="company-date">Finished: 05/2025</div>
+            <p style="margin-top:5px;">
+                A project that allows an administrator to create custom coloring and
+                board game mini-games, as well as import scenes from other Unity
+                projects to incorporate additional mini-games. The mini-games are designed for elderly
+                people and be accessed through characters in a 3D environment (a village).
+            </p>
+            <p>Project: <a href="https://drive.google.com/file/d/1wWAoTLeNMbmfMWil0ME6w4BzPYtzCj_k/view?usp=sharing">Link with build and mini-game creation manual</a></p>
+
+            <div class="job-title" style="margin-top:15px;">E-MASK | Programmer</div>
+            <div class="company-date">Realese: 02/2026</div>
+            <p style="margin-top:5px;">
+                A side-scroller developed for the Global Game Jam, where the player controls 
+                the character Elon Mask and must avoid traps and enemies to reach a computer and post a tweet.ar.
+            </p>
+            <p>Project: <a href="https://davidperuchoconde.itch.io/e-mask">Itch.io page</a></p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
