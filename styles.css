@@ -830,3 +830,157 @@ html {
         font-size: 0.9rem;
     }
 }
+
+
+/* =========================
+   PROYECTOS EN TARJETAS
+   ========================= */
+
+.lista-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.proyecto {
+    margin-top: 0;
+    border: 1px solid #d9deea;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(22, 42, 102, 0.14);
+}
+
+/* Cabecera visual de la tarjeta */
+
+.proyecto summary {
+    display: block;
+    position: relative;
+    padding: 0;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    list-style: none;
+}
+
+.proyecto summary:hover {
+    background: #f8faff;
+}
+
+.proyecto summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Imagen */
+
+.imagen-proyecto {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #e8edff;
+}
+
+/* Texto de la tarjeta */
+
+.resumen-proyecto {
+    padding: 20px;
+    padding-right: 42px;
+}
+
+.resumen-proyecto h3 {
+    color: #162a66;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.resumen-proyecto p {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+/* Icono para indicar que se puede desplegar */
+
+.texto-expandir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 20px auto 4px;
+    padding: 10px 20px;
+    background: #4f46e5;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 999px;
+    box-shadow: 0 3px 8px rgba(79, 70, 229, 0.2);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.proyecto summary:hover .texto-expandir {
+    background: #162a66;
+    transform: translateY(-2px);
+}
+
+/* Símbolo + / − dentro del botón */
+.icono-expandir {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Cambia + por − al abrir la tarjeta */
+.proyecto[open] .icono-expandir {
+    font-size: 0;
+}
+
+.proyecto[open] .icono-expandir::after {
+    content: "−";
+    font-size: 1.1rem;
+}
+
+/* El contenido detallado sigue desplegándose */
+
+.proyecto .contenido {
+    padding: 25px;
+    background: #f8fbfd;
+    border-top: 1px solid #e1e6f0;
+}
+
+/* Tarjetas en móvil */
+
+@media (max-width: 768px) {
+    .lista-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .proyectos {
+        padding: 20px;
+    }
+
+    .resumen-proyecto {
+        padding: 16px;
+        padding-right: 42px;
+    }
+
+    .proyecto .contenido {
+        padding: 20px;
+    }
+}
