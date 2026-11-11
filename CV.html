@@ -123,23 +123,69 @@
         margin-bottom: 8px;
     }
 
+    ul { margin: 4px 0 8px 0; padding-left: 18px; }
+    li { margin-bottom: 3px; }
+
     a {
         color: #0056b3;
     }
 
+    .skill-group { margin-bottom: 10px; }
+    .skill-group strong { color: #ffffff; }
+
+    .skill-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+
+    /* Nivel de 1 a 5: cambia la clase l1..l5 en cada habilidad */
+    .dots {
+        display: flex;
+        gap: 6px;
+        flex: none;
+    }
+
+    .dots i {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #4a5c6e;
+    }
+
+    .dots.l1 i:nth-child(-n+1),
+    .dots.l2 i:nth-child(-n+2),
+    .dots.l3 i:nth-child(-n+3),
+    .dots.l4 i:nth-child(-n+4),
+    .dots.l5 i {
+        background-color: #66b2ff;
+    }
+
     @media print {
+        /* Mantener los colores y fondos */
+        * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        /* Evitar que se oculten los fondos */
         body {
-            background: #ffffff;
+            background: white !important;
         }
 
-        .cv-container {
-            margin: 0;
-            box-shadow: none;
-            page-break-after: avoid;
+        /* Mantener viñetas */
+        ul {
+            list-style-type: disc !important;
         }
 
-        .left-column,
-        .right-column {
+        li::marker {
+            color: inherit !important;
+        }
+
+        /* Evitar cortes innecesarios */
+        .section, .card {
             break-inside: avoid;
         }
     }
@@ -186,13 +232,35 @@
         <div class="contact-item"><strong>Portfolio:</strong><br> <a href="https://dperuchoconde.github.io/portfolioDavidPerucho/">dperuchoconde.github.io/portfolioDavidPerucho/</a></div>
 
         <h2 class="section-title-left">Skills</h2>
-        <div class="section-content">
-            <strong>Técnicas:</strong><br>
-            Lenguajes: C#, C++, Python, SQL, C, VB, JavaScript.<br>
-            Motores: Unity, Unreal.<br>
-            Herramientas: Git, Azure DevOps, Power Automate, Perforce, Jira.<br><br>
-            <strong>Personales:</strong><br>
-            Trabajo en equipo · Comunicación · Resolución de problemas · Adaptabilidad
+       <div class="section-content">
+            <div class="skill-group">
+                <strong>Motores:</strong>
+                <div class="skill-row"><span>Unreal Engine</span><span class="dots l4"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>Unity</span><span class="dots l3"><i></i><i></i><i></i><i></i><i></i></span></div>
+            </div>
+            <div class="skill-group">
+                <strong>Lenguajes:</strong>
+                <div class="skill-row"><span>C++</span><span class="dots l4"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>C#</span><span class="dots l4"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>Python</span><span class="dots l3"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>SQL</span><span class="dots l4"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>JavaScript</span><span class="dots l3"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>C</span><span class="dots l3"><i></i><i></i><i></i><i></i><i></i></span></div>
+            </div>
+            <!--
+            <div class="skill-group">
+                <strong>Áreas:</strong><br>
+                Gameplay, IA (Behaviour Trees, EQS), animaciones, programación de motores
+            </div>
+            -->
+            <div class="skill-group">
+                <strong>Herramientas:</strong><br>
+                Git, Perforce, Jira, Azure DevOps
+            </div>
+            <div class="skill-group">
+                <strong>Personales:</strong><br>
+                Trabajo en equipo · Comunicación · Resolución de problemas · Adaptabilidad
+            </div>
         </div>
 
         <h2 class="section-title-left">Idiomas</h2>
@@ -211,19 +279,11 @@
 
         <h2 class="section-title-right">Perfil Personal</h2>
         <div class="section-content">
-            Programador especializado en desarrollo de videojuegos, con experiencia profesional en desarrollo full-stack y 
-            formación en Ingeniería Informática y programación de videojuegos. Me interesa especialmente la programación de 
-            gameplay, inteligencia artificial y de motores de videojuegos.
-            <br>
-            <br>
-            He desarrollado proyectos en Unreal Engine, incluyendo sistemas de IA basados en Behaviour Trees y EQS, 
-            mecánicas de gameplay y animaciones. También he creado un motor 3D y un editor propios con C++ y,
-            he desarrollado proyectos rn Unity.
-            <br>
-            <br>
-            Actualmente trabajo como programador full-stack, experiencia que me ha permitido reforzar mis habilidades 
-            de desarrollo, resolución de problemas y trabajo en equipo. Mi objetivo es seguir creciendo profesionalmente 
-            en la industria del videojuego.
+            Programador de videojuegos con un juego publicado en Steam (Unwoven) y especialización en gameplay, inteligencia 
+            artificial y animaciones en Unreal Engine. Máster en Desarrollo de Videojuegos (UCM) y grado en Ingeniería 
+            Informática (UAM). He creado un motor 3D con editor propio en C++ y he desarrollado proyectos en Unity. Compagino 
+            mi formación con experiencia profesional en desarrollo full-stack, que me aporta rigor en equipo, control de versiones 
+            y trabajo en producción.
         </div>
 
         <h2 class="section-title-right">Experiencia</h2>

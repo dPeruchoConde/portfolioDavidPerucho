@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <title>CV David Perucho Conde</title>
@@ -123,23 +123,69 @@
         margin-bottom: 8px;
     }
 
+    ul { margin: 4px 0 8px 0; padding-left: 18px; }
+    li { margin-bottom: 3px; }
+
     a {
         color: #0056b3;
     }
 
+    .skill-group { margin-bottom: 10px; }
+    .skill-group strong { color: #ffffff; }
+
+    .skill-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+    }
+
+    /* Nivel de 1 a 5: cambia la clase l1..l5 en cada habilidad */
+    .dots {
+        display: flex;
+        gap: 6px;
+        flex: none;
+    }
+
+    .dots i {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #4a5c6e;
+    }
+
+    .dots.l1 i:nth-child(-n+1),
+    .dots.l2 i:nth-child(-n+2),
+    .dots.l3 i:nth-child(-n+3),
+    .dots.l4 i:nth-child(-n+4),
+    .dots.l5 i {
+        background-color: #66b2ff;
+    }
+
     @media print {
+        /* Mantener los colores y fondos */
+        * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        /* Evitar que se oculten los fondos */
         body {
-            background: #ffffff;
+            background: white !important;
         }
 
-        .cv-container {
-            margin: 0;
-            box-shadow: none;
-            page-break-after: avoid;
+        /* Mantener viñetas */
+        ul {
+            list-style-type: disc !important;
         }
 
-        .left-column,
-        .right-column {
+        li::marker {
+            color: inherit !important;
+        }
+
+        /* Evitar cortes innecesarios */
+        .section, .card {
             break-inside: avoid;
         }
     }
@@ -186,16 +232,38 @@
         <div class="contact-item"><strong>Portfolio:</strong><br> <a href="https://dperuchoconde.github.io/portfolioDavidPerucho/">dperuchoconde.github.io/portfolioDavidPerucho/</a></div>
 
         <h2 class="section-title-left">Skills</h2>
-        <div class="section-content">
-            <strong>Skills:</strong><br>
-            Languages: C#, C++, Python, SQL, C, VB, JavaScript.<br>
-            Game Engines: Unity, Unreal.<br>
-            Tools: Git, Azure DevOps, Power Automate, Perforce, Jira.<br><br>
-            <strong>Personales:</strong><br>
-            Teamwork · Communication · Problem Solving · Adaptability
+       <div class="section-content">
+            <div class="skill-group">
+                <strong>Game Engines:</strong>
+                <div class="skill-row"><span>Unreal Engine</span><span class="dots l4"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>Unity</span><span class="dots l3"><i></i><i></i><i></i><i></i><i></i></span></div>
+            </div>
+            <div class="skill-group">
+                <strong>Languages:</strong>
+                <div class="skill-row"><span>C++</span><span class="dots l4"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>C#</span><span class="dots l4"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>Python</span><span class="dots l3"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>SQL</span><span class="dots l4"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>JavaScript</span><span class="dots l3"><i></i><i></i><i></i><i></i><i></i></span></div>
+                <div class="skill-row"><span>C</span><span class="dots l3"><i></i><i></i><i></i><i></i><i></i></span></div>
+            </div>
+            <!-- 
+            <div class="skill-group">
+                <strong>Soft Skills:</strong><br>
+                Gameplay, IA (Behaviour Trees, EQS), animaciones, programación de motores
+            </div>
+            -->
+            <div class="skill-group">
+                <strong>Tools:</strong><br>
+                Git, Perforce, Jira, Azure DevOps
+            </div>
+            <div class="skill-group">
+                <strong>Soft Skills:</strong><br>
+                Trabajo en equipo · Comunicación · Resolución de problemas · Adaptabilidad
+            </div>
         </div>
 
-        <h2 class="section-title-left">Languajes</h2>
+        <h2 class="section-title-left">Languages</h2>
         <div class="section-content">
             Spanish — Nativo<br>
             English — C1<br>
@@ -211,18 +279,11 @@
 
         <h2 class="section-title-right">Perfil Personal</h2>
         <div class="section-content">
-            Game programmer with professional full-stack development experience and an academic background in Computer 
-            Science and Game Development. I am particularly interested in gameplay programming, artificial intelligence, 
-            and game engine development.
-            <br>
-            <br>
-            I have developed projects using Unreal Engine, including AI systems based on Behaviour Trees and EQS, gameplay 
-            mechanics, and animations. I have also built my own 3D game engine and editor in C++, as well as developed 
-            projects using Unity.
-            <br>
-            <br>
-            I currently work as a full-stack developer, an experience that has strengthened my development, problem-solving, 
-            and teamwork skills. My goal is to continue growing professionally in the video game industry.
+            Video game programmer with a game published on Steam (Unwoven) and a focus on gameplay, AI, and animation programming 
+            in Unreal Engine. Master's Degree in Video Game Programming (UCM) and Bachelor's Degree in Computer Science (UAM). 
+            Developed a custom 3D game engine and editor in C++, alongside projects using Unity. Alongside my game development 
+            background, I have professional experience in full-stack development, which has strengthened my ability to collaborate 
+            in teams, work with version control, and contribute to production environments.
         </div>
 
         <h2 class="section-title-right">Expirience</h2>

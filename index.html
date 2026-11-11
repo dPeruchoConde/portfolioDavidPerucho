@@ -40,20 +40,11 @@
             <section id="sobre-mi">
                 <h2>Sobre mí</h2>
                 <p>
-                    Programador especializado en desarrollo de videojuegos, con experiencia profesional en desarrollo full-stack y 
-                    formación en Ingeniería Informática y programación de videojuegos. Me interesa especialmente la programación de 
-                    gameplay, inteligencia artificial y de motores de videojuegos.
-                    <br>
-                    He desarrollado proyectos en Unreal Engine, incluyendo sistemas de IA basados en Behaviour Trees y EQS, 
-                    mecánicas de gameplay y animaciones. También he creado un motor 3D y un editor propios con C++ y,
-                    he desarrollado proyectos rn Unity.
-                    <br>
-                    Actualmente trabajo como programador full-stack, experiencia que me ha permitido reforzar mis habilidades 
-                    de desarrollo, resolución de problemas y trabajo en equipo. Mi objetivo es seguir creciendo profesionalmente 
-                    en la industria del videojuego.
-                    <br>
-                    <br>
-                    Idiomas: español (nativo), inglés (C1), italiano (B2) y catalán (B2).
+                    Programador de videojuegos con un juego publicado en Steam (Unwoven) y especialización en gameplay, IA y animaciones 
+                    en Unreal Engine. Máster en Desarrollo de Videojuegos (UCM) y grado en Ingeniería 
+                    Informática (UAM). He creado un motor 3D con editor propio en C++ y he desarrollado proyectos en Unity. Compagino 
+                    mi formación con experiencia profesional en desarrollo full-stack, que me aporta rigor en equipo, control de versiones 
+                    y trabajo en producción.
                 </p>
             </section>
 
@@ -95,11 +86,15 @@
                                     que solo se le puede golpear por la espalda. Para la implementación, 
                                     utilicé herramientas de Unreal como las EQS y los Behaviour Trees.
                                 </p>
-
                                 <p>
                                     Además, implementé funciones de gameplay
-                                    como el autoapuntado, la curación (utilizando el sistema GAS de Unreal) o las trampas, así como las 
-                                    animaciones de algunos enemigos utilizando Animation Blueprints de Unreal.
+                                    como el autoapuntado, la curación (utilizando el sistema GAS de Unreal), las trampas
+                                    y la mecánica de reaparición tras morir.
+                                </p>
+                                <p>
+                                    Por último, implemente las animaciones del enemigo que coloca las trampas y del enemigo que 
+                                    explota por contacto, utilizando el Animation Blueprint de Unreal, así como los animation montages y
+                                    notifys.
                                 </p>
                             </div>
                             <div class="bloque-info">
@@ -183,6 +178,15 @@
                                     raylib (para el renderizado) y ImGui (para la UI del editor). En el futuro planeo sustituir la primera
                                     de estas librerías por mi propio pipeline de renderizado.
                                 </p>
+                                <p>
+                                    Dentro del proyecto el editor, el motor y el juego se encuentran separados para que el editor 
+                                    pueda usar la dll del motor y del juego ya compiliadas y recompilarlas en caso de que sea necesario.
+                                </p>
+                                <p>
+                                    El proyecto permite crear, eliminar entidades, añadir componentes a las entidades y modificar los 
+                                    parametros de sus componentes, así como crear y guardar escenas y simular el comportamiento de las
+                                    entidades en el viewport.
+                                </p>
                             </div>
                         </div>
 
@@ -238,6 +242,10 @@
                                 <p>
                                     Realicé el desarrollo del proyecto en su totalidad con la ayuda de algunos assets 3D y música sin 
                                     derechos de autor.
+                                </p>
+                                <p>
+                                    Para la carga dinámica de escenas utilicé Unity adressables, lo que me permitió cargar
+                                    minijuegos nuevos en un proyecto ya compiliado.
                                 </p>
                             </div>
                             <div class="bloque-info">
@@ -311,7 +319,8 @@
                                 <h3>Rol en el proyecto</h3>
                                 <p>
                                     Realicé el shader que permite cambiar el color del mundo y hacer que los enemigos de ese color 
-                                    desaparezcan, así como la implementación del sonido, del menú principal y de las cámaras de detección.
+                                    desaparezcan utilizando el Shader Lab de Unity, así como la implementación del sonido a través de FMOD, 
+                                    la UI del juego y de las cámaras de detección.
                                 </p>
                             </div>
                             <div class="bloque-info">
@@ -465,19 +474,11 @@
             <section id="about-me">
                 <h2>About me</h2>
                 <p>
-                    Game programmer with professional full-stack development experience and an academic background in Computer 
-                    Science and Game Development. I am particularly interested in gameplay programming, artificial intelligence, 
-                    and game engine development.
-                    <br>
-                    I have developed projects using Unreal Engine, including AI systems based on Behaviour Trees and EQS, gameplay 
-                    mechanics, and animations. I have also built my own 3D game engine and editor in C++, as well as developed 
-                    projects using Unity.
-                    <br>
-                    I currently work as a full-stack developer, an experience that has strengthened my development, problem-solving, 
-                    and teamwork skills. My goal is to continue growing professionally in the video game industry.
-                    <br>
-                    <br>
-                    Languages: Spanish (native), English (C1), Italian (B2), and Catalan (B2).
+                    Video game programmer with a game published on Steam (Unwoven) and a focus on gameplay, AI, and animation programming 
+                    in Unreal Engine. Master's Degree in Video Game Programming (UCM) and Bachelor's Degree in Computer Science (UAM). 
+                    Developed a custom 3D game engine and editor in C++, alongside projects using Unity. Alongside my game development 
+                    background, I have professional experience in full-stack development, which has strengthened my ability to collaborate 
+                    in teams, work with version control, and contribute to production environments.
                 </p>
             </section>
 
@@ -517,11 +518,13 @@
                                     traps, and a tank enemy that can only be damaged from behind. For the implementation, 
                                     I used Unreal Engine tools such as EQS and Behaviour Trees.
                                 </p>
-
                                 <p>
-                                    I also implemented gameplay features such as
-                                    the auto-aim, the healing ability (using Unreal GAS system) or the traps, as well as the animations for 
-                                    some enemies using Unreal's Animation Blueprints.
+                                    Additionally, I implemented gameplay features such as auto-aim, healing (using Unreal Engine's 
+                                    Gameplay Ability System, GAS), traps, and the respawn mechanic triggered when the player dies.
+                                </p>
+                                <p>
+                                    Finally, I implemented the animations for the trap-setting enemy and the exploding enemy, using 
+                                    Unreal Engine's Animation Blueprints, Animation Montages, and Anim Notifies.
                                 </p>
                             </div>
 
@@ -602,6 +605,15 @@
                                     rendering and ImGui for the editor's UI. In the future, I plan to replace the raylib functions
                                     with my own rendering pipeline.
                                 </p>
+                                <p>
+                                    The editor, engine, and game are separated into different projects, allowing the editor to use 
+                                    the precompiled engine and game DLLs and recompile them whenever necessary.
+                                </p>
+                                <p>
+                                    The project allows users to create and delete entities, add components to entities, and modify 
+                                    their component parameters. It also supports creating and saving scenes, as well as simulating 
+                                    entity behaviour directly in the viewport.
+                                </p>
                             </div>
                         </div>
 
@@ -656,6 +668,10 @@
                                 <h3>Role in the Project</h3>
                                 <p>
                                     I developed the entire project using some 3D assets and royalty-free music.
+                                </p>
+                                <p>
+                                    For dynamic scene loading, I used Unity Addressables, which allowed me to 
+                                    load new minigames into an already compiled project.
                                 </p>
                             </div>
 
@@ -730,8 +746,8 @@
                                 <h3>Role in the Project</h3>
                                 <p>
                                     I developed the shader responsible for changing the world's color and making enemies of the 
-                                    corresponding color disappear. I also implemented the sound system, main menu, and detection 
-                                    cameras.
+                                    corresponding color disappear using Unity's Shader Lab. I also implemented the sound system through FMOD,
+                                    the games UI, and detection cameras.
                                 </p>
                             </div>
 
